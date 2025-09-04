@@ -16,7 +16,6 @@ const NAV_LINKS = [
     { href: '#about', label: 'About' },
     { href: '#services', label: 'Services' },
     { href: '#portfolio', label: 'Portfolio' },
-    { href: '#contact', label: 'Contact' },
 ];
 
 const Header = () => {
@@ -248,70 +247,7 @@ const Portfolio = () => (
     </section>
   );
 
-const PrivacyPolicyModal = ({ show, onClose }: { show: boolean, onClose: () => void }) => {
-    if (!show) {
-      return null;
-    }
-  
-    return (
-      <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex justify-center items-center p-4 transition-opacity duration-300" onClick={onClose}>
-        <div className="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[80vh] overflow-y-auto relative text-left" onClick={(e) => e.stopPropagation()}>
-          <div className="p-6 sm:p-8">
-            <div className="flex justify-between items-start">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Privacy Policy</h2>
-              <button onClick={onClose} className="text-gray-400 hover:text-gray-900 transition-colors duration-300">
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            <div className="text-gray-600 space-y-4">
-              <p><strong>Last Updated:</strong> {new Date().toLocaleDateString()}</p>
-              <p>This is a placeholder for the Privacy Policy of Achdouz Company LLC ("we," "us," or "our"). This document should inform users about how we collect, use, and protect their personal information. It is crucial to replace this placeholder text with an actual, legally compliant privacy policy.</p>
-              <h3 className="font-bold text-gray-800 pt-2">1. Information We Collect</h3>
-              <p>This section should detail the types of information you collect from users, such as names, email addresses, browsing data, etc., both automatically and through user input.</p>
-              <h3 className="font-bold text-gray-800 pt-2">2. How We Use Your Information</h3>
-              <p>Explain the purposes for which you collect user data, such as to provide services, for marketing, to improve the website, or to communicate with users.</p>
-              <h3 className="font-bold text-gray-800 pt-2">3. Information Sharing and Disclosure</h3>
-              <p>Clarify if and with whom you share user data (e.g., third-party service providers, legal authorities). Be transparent about these practices.</p>
-              <h3 className="font-bold text-gray-800 pt-2">4. Data Security</h3>
-              <p>Describe the measures you take to protect user data from unauthorized access, such as encryption and secure servers.</p>
-              <h3 className="font-bold text-gray-800 pt-2">5. Your Rights</h3>
-              <p>Inform users of their rights regarding their data, such as the right to access, correct, or delete their personal information.</p>
-              <h3 className="font-bold text-gray-800 pt-2">6. Contact Us</h3>
-              <p>Provide contact information for users who have questions about this privacy policy. You can use the email <a href="mailto:achdouzcompanyllc@gmail.com" className="text-red-600 hover:underline">achdouzcompanyllc@gmail.com</a>.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
 
-const Footer = () => {
-    const [showPrivacyModal, setShowPrivacyModal] = useState(false);
-
-    const handlePrivacyClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault();
-        setShowPrivacyModal(true);
-    };
-
-    return (
-        <>
-            <footer id="contact" className="bg-black text-gray-400 py-8">
-                <div className="container mx-auto px-6 text-center">
-                    <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4">
-                        <p>&copy; {new Date().getFullYear()} Achdouz Company LLC. All Rights Reserved.</p>
-                        <span className="hidden sm:inline">|</span>
-                        <a href="#" onClick={handlePrivacyClick} className="hover:text-white transition-colors duration-300 underline-offset-4 hover:underline">
-                            Privacy Policy
-                        </a>
-                    </div>
-                </div>
-            </footer>
-            <PrivacyPolicyModal show={showPrivacyModal} onClose={() => setShowPrivacyModal(false)} />
-        </>
-    );
-};
   
 
 function App() {
@@ -324,7 +260,6 @@ function App() {
         <Services />
         <Portfolio />
       </main>
-      <Footer />
     </div>
   );
 }
