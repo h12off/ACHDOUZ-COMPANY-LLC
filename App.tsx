@@ -250,6 +250,16 @@ const Portfolio = () => (
 
   
 
+const Footer = () => {
+    return (
+        <footer className="bg-black text-gray-400 py-8">
+            <div className="container mx-auto px-6 text-center">
+                <p>&copy; 2025 Achdouz Company LLC. All Rights Reserved.</p>
+            </div>
+        </footer>
+    );
+};
+
 function App() {
   return (
     <div className="bg-white">
@@ -260,6 +270,7 @@ function App() {
         <Services />
         <Portfolio />
       </main>
+      <Footer />
     </div>
   );
 }
