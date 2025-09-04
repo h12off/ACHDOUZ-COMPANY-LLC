@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { SERVICES_DATA } from './constants';
 import { ServiceCard } from './components/ServiceCard';
 
@@ -271,6 +272,7 @@ function App() {
         <Portfolio />
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }
