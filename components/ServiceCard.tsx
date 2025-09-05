@@ -26,9 +26,9 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, items, is
                   </svg>
                   <span className="text-gray-400">{item.name}</span>
                 </div>
-                <div className={`transition-all duration-500 ease-in-out overflow-hidden ${showPrices && item.price ? 'max-w-xs opacity-100' : 'max-w-0 opacity-0'}`}>
+                <div className={`transition-all duration-500 ease-in-out overflow-hidden ${showPrices && item.price ? 'max-w-[100px] sm:max-w-xs opacity-100' : 'max-w-0 opacity-0'}`}>
                   {item.price && (
-                    <span className="text-red-500 ml-4 font-mono text-sm whitespace-nowrap">{item.price}</span>
+                    <span className="text-red-500 ml-4 font-mono text-sm whitespace-normal">{item.price}</span>
                   )}
                 </div>
               </li>
