@@ -3,7 +3,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SERVICES_DATA } from './constants';
 import { ServiceCard } from './components/ServiceCard';
 
-const PORTFOLIO_IMAGES = [
+const CEO_IMAGES = [
   'https://i.ibb.co/GvPnspx2/58b70dc4-c9ce-4696-9aa2-9e2c38d95af9.jpg',
   'https://i.ibb.co/9kHF27b7/80dacb68-160c-4710-8687-f4234072f5ba.png',
   'https://i.ibb.co/kgpxZSQ1/342dce71-3b79-4efc-8af3-f30d3a246ccc.jpg',
@@ -16,7 +16,7 @@ const PORTFOLIO_IMAGES = [
 const NAV_LINKS = [
     { href: '#about', label: 'About' },
     { href: '#services', label: 'Services' },
-    { href: '#portfolio', label: 'Portfolio' },
+    { href: '#ceo', label: 'CEO' },
 ];
 
 const Header = () => {
@@ -224,20 +224,20 @@ const About = () => {
     );
   };
 
-const Portfolio = () => (
-    <section id="portfolio" className="py-12 sm:py-20 bg-white">
+const CEO = () => (
+    <section id="ceo" className="py-12 sm:py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900">From the CEO's Desk</h3>
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-900">A Message from the CEO</h3>
           <p className="text-gray-600 mt-2">A showcase of projects that represent our creative vision.</p>
           <div className="mt-4 h-1 w-24 bg-red-600 mx-auto"></div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {PORTFOLIO_IMAGES.map((src, index) => (
+          {CEO_IMAGES.map((src, index) => (
             <div key={index} className="group relative overflow-hidden rounded-lg shadow-lg h-64 sm:h-80">
               <img 
                 src={src} 
-                alt={`Portfolio item ${index + 1}`} 
+                alt={`CEO item ${index + 1}`} 
                 className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110" 
               />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
@@ -324,7 +324,7 @@ function App() {
         <Hero />
         <About />
         <Services />
-        <Portfolio />
+        <CEO />
       </main>
       <Footer />
       <Analytics />
