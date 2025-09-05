@@ -57,7 +57,7 @@ const Header = () => {
       <>
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-white/90 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
             <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-                <a href="#" onClick={handleLogoClick} className="text-xl font-black tracking-wider uppercase transition-colors duration-300 z-50">
+                <a href="#" onClick={handleLogoClick} className="text-2xl font-black tracking-wider uppercase transition-colors duration-300 z-50">
                     <span className={scrolled || isMenuOpen ? 'text-gray-900' : 'text-white'}>ACHDOUZ COMPANY LLC</span>
                 </a>
                 <nav className="hidden md:flex space-x-8">
@@ -110,7 +110,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-black opacity-60"></div>
             <div className="relative z-10 px-4">
                 <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-white uppercase tracking-widest text-glow">Turn Vision into Reality</h2>
-                <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+                <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-300 max-w-xl sm:max-w-3xl mx-auto">
                     We combine creativity, technology, and global media expertise to elevate your brand.
                 </p>
                 <a 
@@ -155,7 +155,7 @@ const About = () => {
     }, []);
 
     return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-12 sm:py-20 bg-white">
       <div ref={aboutRef} className={`container mx-auto px-6 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="max-w-4xl mx-auto">
               <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
@@ -196,7 +196,7 @@ const About = () => {
     };
   
     return (
-      <section id="services" className="py-20 bg-black">
+      <section id="services" className="py-12 sm:py-20 bg-black">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-bold text-white">Our Services</h3>
@@ -225,7 +225,7 @@ const About = () => {
   };
 
 const Portfolio = () => (
-    <section id="portfolio" className="py-20 bg-white">
+    <section id="portfolio" className="py-12 sm:py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h3 className="text-3xl md:text-4xl font-bold text-gray-900">From the CEO's Desk</h3>
